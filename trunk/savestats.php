@@ -23,14 +23,14 @@ if (defined('AIRIO_STATS_ACCESSKEY')) {
     if (AIRIO_STATS_ACCESSKEY == 'put your custom accesskey here') {
         die('<h1 style="margin:0">Misconfigured.</h1>You have to change password to get this to work.');
     };
-    if ($_GET['AK'] != AIRIO_STATS_ACCESSKEY) {
+    if ($_REQUEST['AK'] != AIRIO_STATS_ACCESSKEY) {
         die('<h1 style="margin:0">Unauthorised</h1>You need to supply access key to use this page.');
 
     }
 }
 // We'll get rid of accesskey variable here,
 // it won't be of any use anywhere else
-unset($_GET['AK']);
+unset($_REQUEST['AK']);
 
 // Use UTC time, so everybody knows when's what
 date_default_timezone_set('UTC');
