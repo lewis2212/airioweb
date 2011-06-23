@@ -119,9 +119,11 @@ function stats_update() {
 }
 
 $(document).ready(function() {
-    $('#airjo .label').css({
-        left:($('#airjo .window').width()-20-$('#airjo .label').width()) + 'px',
-        top:'45px'
+    $('#airjo .label img').load(function() {
+        $('#airjo .label').css({
+            left:($('#airjo .window').width()-20-$('#airjo .label').width()) + 'px',
+            top:'45px'
+            });
         });
     stats_state.date = new Date();
     stats_update();
