@@ -44,3 +44,7 @@ $config['guestcharts'] = Array('C','P','B','K','T');
 // Define password for accessing 'non-guest' charts.
 // Default password `admin_pass` is disabled. You HAVE TO change it.
 $config['adminpass'] = 'admin_pass';
+
+// Page title and header
+$config['pagetitle'] = 'Sample Airio LFS Server stats page';
+$config['pagehead'] = 'Server stats page';

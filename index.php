@@ -3,7 +3,7 @@
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
 <head>
-    <title> Sample Airio LFS Server stats page </title>
+    <title><?php echo $config['pagetitle']; ?></title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
@@ -29,7 +29,7 @@ It's generally not a bad idea to replace googleapis links with local files.
 ?>
 <body>
 <div id="airjo" class="round">
-<h1> Server stats page </h1>
+<h1><?php echo $config['pagehead']; ?></h1>
 <div class="panel">
     <div class="buttons">
         <select class="chart">
@@ -121,8 +121,8 @@ function stats_update() {
 $(document).ready(function() {
     $('#airjo .label img').load(function() {
         $('#airjo .label').css({
-            left:($('#airjo .window').width()-20-$('#airjo .label').width()) + 'px',
-            top:'45px'
+            left:($('#airjo .window').width()-35-$('#airjo .label').width()) + 'px',
+            top:'40px'
             });
         });
     stats_state.date = new Date();
