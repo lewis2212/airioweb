@@ -1,4 +1,5 @@
 <?php session_start();ob_start();error_reporting(E_PARSE);
+require(dirname(__FILE__)."/config.php");
 
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
@@ -14,7 +15,6 @@ It's generally not a bad idea to replace googleapis links with local files.
 -->
 </head>
 <?php
-    require(dirname(__FILE__)."/config.php");
     if ($_POST['pass'] == $config['adminpass']) {
         if ($config['adminpass'] != 'admin_pass') {
             $_SESSION['is_admin'] = 1;
